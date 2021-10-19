@@ -1,0 +1,21 @@
+.title {
+    @include ExtraBold;
+    font-size: 300px;
+    line-height: 1;
+    opacity: 0.25;
+    @include bp(xxl) {
+        font-size: 255px;
+    }
+    @include bp(xl) {
+        font-size: 200px;
+    }
+    @include bp(lg) {
+        font-size: 130px;
+    }
+    @include bp(md) {
+        font-size: 90px;
+    }
+    @include bp(xs) {
+        font-size: 54px;
+    }
+}

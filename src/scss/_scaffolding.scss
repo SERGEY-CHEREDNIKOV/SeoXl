@@ -1,0 +1,86 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+
+    font-family: "Montserrat-Regular", serif;
+    font-weight: 400;
+    color: #FFF;
+    line-height: 30px;
+    font-size: 24px;
+    background-color: #000000;
+}
+
+h1,
+h2, 
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}  
+            
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+input,textarea {
+    padding: 0;
+    display: block;
+    width: 100%;
+}
+
+.container {
+    @include container;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+}
+
+.overflow {
+    overflow: hidden;
+}

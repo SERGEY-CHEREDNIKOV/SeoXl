@@ -1,0 +1,31 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    min-height: 50px;
+    padding: 0 5px;
+
+    @include Medium;
+    color: #fff;
+    font-size: 25px;
+    line-height: 1;
+    overflow: hidden;
+    cursor: pointer;
+
+    border: 2px solid #ffffff;
+    border-radius: 1px;
+}
+.button.button--white {
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: 8px 0px 10px rgba(0, 0, 0, 0.25), 0px 8px 10px rgba(0, 0, 0, 0.25);
+}
+.button:active {
+    opacity: 1;
+    color: #000000;
+    background-color: #ffffff;
+}
+.button.button--white:active {
+    opacity: 0.4;
+}

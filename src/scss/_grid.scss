@@ -1,0 +1,77 @@
+@use 'sass:math';     
+
+//максимальная ширина контейнера
+$container-max-width: 1570px !default;  
+
+//кол-во колонок
+$grid-columns: 12 !default;
+
+
+//расстояние меду элементами
+$grid-gap: 30px !default;
+$grid-gap-side: math.div($grid-gap, 2);   
+
+//контрольные точки
+$grid-breakpoints: (
+    xs: 420,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1240px,
+    xxl: 1480px
+) !default; 
+
+@mixin container {
+    margin: 0 auto;
+    max-width: $container-max-width;
+    padding: 0 15px;
+}
+
+@mixin row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -#{$grid-gap-side};
+    margin-right: -#{$grid-gap-side};
+
+    &> * {
+        margin-left: $grid-gap-side;
+        margin-right: $grid-gap-side;
+    }
+}
+
+@mixin col($size) {
+    flex: 0 0 auto;
+    width: calc(#{percentage(math.div($size, $grid-columns))} - #{$grid-gap});            
+}      
+
+// @mixin media($width) {
+//     @media(min-width: $width) {
+//         @content;
+//     }
+// }
+
+@mixin media($width) {
+    @media screen and(max-width: $width) {
+        @content;
+    }
+}
+
+@mixin bp($name) {
+    $width: map-get($grid-breakpoints, $name);
+    @include media($width) {
+        @content;
+    }
+}  
+
+// генерация колонок
+
+// @each $bp, $width in $grid-breakpoints {
+//     @include media($width) {
+//         @for $i from 1 through $grid-columns { 
+//             .col-#{$bp}-#{$i} {    
+//                 @include col($i);        
+//             }  
+//         }  
+//     }  
+// }
+

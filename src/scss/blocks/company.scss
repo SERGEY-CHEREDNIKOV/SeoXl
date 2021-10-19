@@ -1,0 +1,14 @@
+.company {
+
+    text-align: center;
+    &__name {
+        @include Bold;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    &__text {
+        font-size: 15px;
+        line-height: 18px;
+    }
+}

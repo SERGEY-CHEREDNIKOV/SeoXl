@@ -1,0 +1,26 @@
+@mixin Regular {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+}
+
+@mixin Medium {
+    font-family: "Montserrat-Medium";
+    font-weight: 500;
+}
+
+@mixin SemiBold {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+}
+
+@mixin Bold {
+    font-family: "Montserrat-Bold";
+    font-weight: 700;
+}
+
+@mixin ExtraBold {
+    font-family: "Montserrat-ExtraBold";
+    font-weight: 800;
+}
+
+
