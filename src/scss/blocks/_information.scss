@@ -1,6 +1,10 @@
 .information {
     background-color: #000;
     margin-bottom: 85px;
+    background-image: url(../../img/backg-logo.svg);
+    background-repeat: no-repeat;
+    background-position: 25% 75%;
+    background-size: contain;
     &__wrapper {
         @include row;
         margin-bottom: 65px;

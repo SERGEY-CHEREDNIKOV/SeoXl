@@ -1,0 +1,135 @@
+.about-us {
+    background-image: url(../../img/backg-logo.svg);
+    background-repeat: no-repeat;
+    background-position: 25% 75%;
+    &__wrapper {
+        @include row;
+    }
+
+    &__inner-left {
+        @include col(5);
+    }
+
+    &__title-text {
+        @include Medium;
+        font-size: 48px;
+        line-height: 48px;
+
+        margin-bottom: 75px;
+    }
+
+    &__text {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    &__text span,
+    &__title-text span {
+        color: #50af5d;
+    }
+
+    &__inner-right {
+        @include col(7);
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        max-width: 240px;
+        margin-bottom: 75px;
+    }
+    &__item--four{
+        order: 1;
+    }
+    &__item--five{
+        max-width: 480px;
+    }
+
+    &__item-number {
+        position: relative;
+
+        @include ExtraBold;
+        font-size: 72px;
+        line-height: 72px;
+        text-transform: uppercase;
+        color: #50af5d;
+
+        padding-left: 80px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+    &__item-number::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 140px;
+        height: 140px;
+        background-image: url(../img/subtract.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__item-text {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
+
+.about-us {
+    @include bp(xxl) {
+        &__inner-left {
+            @include col(12);
+        }
+        &__inner-right {
+            @include col(12);
+            max-width: 885px;
+            margin: 0 auto;
+        }
+        &__text {
+            margin-bottom: 25px;
+        }
+
+    }
+    @include bp(lg) {
+        &__title-text {
+            font-size: 35px;
+            line-height: 35px;
+    
+            margin-bottom: 55px;
+        }
+    }
+    @include bp(md) {
+        &__title-text {
+            font-size: 26px;
+            line-height: 26px;
+    
+            margin-bottom: 35px;
+        }
+        &__text {
+            font-size: 20px;
+            line-height: 22px;
+        }
+        &__item--four{
+            order: 0;
+        }
+        &__item-text {
+            font-size: 20px;
+            line-height: 22px;
+        }
+    }
+    @include bp(sm) {
+        &__item-number {
+            font-size: 42px;
+            line-height: 55px;
+        }
+        &__item-number::before {
+            width: 115px;
+            height: 115px;
+        }
+    }
+}
