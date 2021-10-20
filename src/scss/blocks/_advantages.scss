@@ -1,0 +1,131 @@
+.advantages {
+    margin-bottom: 80px;
+    &__text-box {
+        @include row;
+        margin-bottom: 60px;
+    }
+
+    &__title-text {
+        @include col(6);
+        max-width: 750px;
+
+        @include Medium;
+        font-size: 48px;
+        line-height: 48px;
+    }
+    &__title-text span {
+        color: #50af5d;
+    }
+
+    &__text {
+        @include col(6);
+        max-width: 600px;
+
+        font-size: 24px;
+        line-height: 29px;
+    }
+    &__line {
+        margin-bottom: 60px;
+    }
+    &__line svg {
+        max-width: 1540px;
+    }
+    &__list {
+        @include row;
+    }
+
+    &__item {
+        @include col(3);
+
+        border-left: 5px solid #50af5d;
+        background-color: #1d3038;
+        padding: 25px 10px 25px 15px;
+        margin-bottom: 15px;
+    }
+
+    &__item-title {
+        font-size: 24px;
+        line-height: 29px;
+        @include Bold;
+
+        margin-bottom: 25px;
+    }
+
+    &__item-text {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
+
+.advantages {
+    @include bp(xl) {
+        &__text-box {
+            margin-bottom: 25px;
+        }
+        &__title-text {
+            @include col(12);
+            margin-bottom: 25px;
+        }
+        &__text {
+            @include col(12);
+        }
+        &__line {
+            margin-bottom: 25px;
+        }
+
+        &__line-circle--two {
+            display: none;
+        }
+
+        &__line-circle--three {
+            display: none;
+        }
+
+        &__line-circle--four {
+            display: none;
+        }
+        &__item {
+            @include col(6);
+        }
+    }
+    @include bp(lg) {
+        margin-bottom: 50px;
+        &__title-text {
+            font-size: 35px;
+            line-height: 35px;
+        }
+    }
+    @include bp(md) {
+        &__title-text {
+            font-size: 26px;
+            line-height: 26px;
+        }
+        &__text {
+            font-size: 18px;
+            line-height: 22px;
+        }
+        &__item {
+            @include col(12);
+        }
+        &__item-title {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+
+        &__item-text {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    @include bp(sm) {
+        &__title-text {
+            font-size: 23px;
+            line-height: 23px;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}

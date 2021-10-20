@@ -3,19 +3,23 @@
     font-size: 300px;
     line-height: 1;
     opacity: 0.25;
+    margin-left: -20px;
     @include bp(xxl) {
         font-size: 255px;
+        margin-left: -15px;
     }
     @include bp(xl) {
         font-size: 200px;
     }
     @include bp(lg) {
         font-size: 130px;
+        margin-left: -7px;
     }
     @include bp(md) {
         font-size: 90px;
     }
-    @include bp(xs) {
+    @include bp(sm) {
         font-size: 54px;
+        margin-left: -3px;
     }
 }

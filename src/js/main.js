@@ -1,6 +1,3 @@
-
-
-
 import burger from "./modules/burger"; 
 import slider from "./modules/slider"; 
 import scrolling from "./modules/scrolling"; 

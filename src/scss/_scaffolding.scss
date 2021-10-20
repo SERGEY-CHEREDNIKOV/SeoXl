@@ -12,23 +12,23 @@ body {
     margin: 0px;
     padding: 0px;
 
-    font-family: "Montserrat-Regular", serif;
+    font-family: "Montserrat-Regular", Arial;
     font-weight: 400;
-    color: #FFF;
+    color: #fff;
     line-height: 30px;
     font-size: 24px;
     background-color: #000000;
 }
 
 h1,
-h2, 
+h2,
 h3,
 h4,
 h5,
 h6 {
     margin: 0;
-}  
-            
+}
+
 ul,
 li {
     list-style: none;
@@ -58,7 +58,8 @@ button {
     color: inherit;
     background-color: transparent;
 }
-input,textarea {
+input,
+textarea {
     padding: 0;
     display: block;
     width: 100%;
