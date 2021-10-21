@@ -12,3 +12,12 @@
         line-height: 18px;
     }
 }
+
+.company {
+    @include bp(sm) {
+        &__name {
+            font-size: 17px;
+            line-height: 20px;
+        }
+    }
+}

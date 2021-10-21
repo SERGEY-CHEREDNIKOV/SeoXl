@@ -14,31 +14,25 @@
     &__inner:last-child {
         margin-right: 0px;
     }
-
     &__label {
         @include Medium;
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 1px;
     }
-
     &__input {
         background-color: #1d3038;
         border: none;
         border-bottom: 2px solid #ffffff;
     }
-    &__input--name {
-    }
-
     &__email-box {
         margin-bottom: 35px;
     }
-
     &__check-box {
         margin-bottom: 60px;
     }
     &__check-label {
-        @include Bold; 
+        @include Bold;
         font-size: 21px;
         line-height: 28px;
     }
@@ -49,7 +43,6 @@
         padding-top: 15px;
         margin-bottom: 15px;
     }
-
     &__check-link {
         @include SemiBold;
         font-size: 16px;
@@ -57,12 +50,6 @@
     }
 }
 
-// xs: 480px,
-// sm: 576px,
-// md: 768px,
-// lg: 992px,
-// xl: 1240px,
-// xxl: 1340px
 
 .form {
     @include bp(md) {
@@ -79,28 +66,6 @@
         &__check-label {
             font-size: 18px;
             line-height: 28px;
-        }
-    }
-    @include bp(sm) {
-        &__inner {
-        }
-
-        &__label {
-        }
-
-        &__input {
-        }
-
-        &__email-box {
-        }
-
-        &__check-box {
-        }
-
-        &__check-text {
-        }
-
-        &__check-link {
         }
     }
 }

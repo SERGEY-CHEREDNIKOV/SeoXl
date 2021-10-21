@@ -1,0 +1,116 @@
+.case {
+    padding-bottom: 80px;
+    margin-bottom: 30px;
+    background-image: url('../img/case-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__swapper {
+        @include row;
+    }
+
+    &__box-text {
+        @include col(6);
+    }
+
+    &__effectiveness-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 500px;
+    }
+
+    &__effectiveness-item {
+        margin: 46px 0;
+    }
+
+    &__item-tile {
+        max-width: 200px;
+
+        @include Medium;
+        font-size: 48px;
+        line-height: 59px;
+    }
+
+    &__item-text {
+        max-width: 200px;
+
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    &__link-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 500px;
+    }
+
+    &__link {
+        font-size: 16px;
+        line-height: 20px;
+        color: #50af5d;
+        cursor: pointer;
+
+        border-bottom: 1px dashed #50af5d;
+        margin-right: 10px;
+    }
+    &__link:last-child {
+        margin-right: 0px;
+    }
+
+    &__inner {
+        @include col(6);
+    }
+}
+
+.case__inner.progress {
+    margin-left: auto;
+    max-width: 720px;
+}
+
+.case {
+    @include bp(xl) {
+        padding-bottom: 50px;
+    }
+    @include bp(lg) {
+        &__box-text {
+            @include col(12);
+        }
+        &__effectiveness-list {
+            max-width: 599px;
+            margin: 0 auto;
+        }
+        &__inner {
+            @include col(12);
+        }
+
+        &__link-wrapper {
+            max-width: 100%;
+        }
+        &__link {
+            margin-bottom: 15px;
+        }
+
+        &__inner.progress {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+    }
+    @include bp(md) {
+        &__effectiveness-list {
+            justify-content: center;
+        }
+        &__effectiveness-item {
+            margin: 25px 0;
+        }
+        &__item-tile {
+            font-size: 36px;
+            line-height: 36px;
+            text-align: center;
+        }
+        &__item-text {
+            text-align: center;
+        }
+    }
+}
