@@ -1,0 +1,96 @@
+.consultation {
+    margin-bottom: 80px;
+    &__wrapper {
+        @include row;
+    }
+
+    &__text-box {
+        @include col(6);
+        align-self: center;
+    }
+
+    &__title-text {
+        max-width: 740px;
+        margin: 0 auto;
+        margin-bottom: 90px;
+
+        @include Medium;
+        font-size: 48px;
+        line-height: 48px;
+    }
+    &__title-text span {
+        color: #50af5d;
+    }
+
+    &__text {
+        position: relative;
+        font-size: 24px;
+        line-height: 29px;
+
+        max-width: 740px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        padding-bottom: 30px;
+    }
+    &__text::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 30px;
+        width: 100%;
+        background-image: url("../img/arrow-big.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__inner-right {
+        @include col(6);
+    }
+}
+
+// xs: 480px,
+// sm: 576px,
+// md: 768px,
+// lg: 992px,
+// xl: 1240px,
+// xxl: 1340px
+
+.consultation {
+    @include bp(xl) {
+        margin-bottom: 50px;
+        &__text-box {
+            @include col(12);
+        }
+        &__text::after {
+            display: none;
+        }
+        &__inner-right {
+            @include col(12);
+        }
+    }
+    @include bp(md) {
+        &__title-text {
+            font-size: 36px;
+            line-height: 36px;
+            margin-bottom: 30px;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    @include bp(sm) {
+        &__title-text {
+            font-size: 23px;
+            line-height: 23px;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 17px;
+            padding-bottom: 0;
+        }
+    }
+}
